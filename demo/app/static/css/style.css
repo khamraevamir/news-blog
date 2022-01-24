@@ -1,0 +1,86 @@
+
+
+:root{
+    --red--: #ff4d4d;
+    --dark-red--: #ff3838;
+
+    --blue--: #00a8ff;
+    --dark-blue--: #0097e6;
+
+    --orange--: #fd9644;
+    --dark-orange--: #fa8231;
+
+    --yellow--: #fed330;
+    --dark-yellow--: #f7b731;
+
+    --green--: #26de81;
+    --dark-green--: #20bf6b;
+
+    --purple--: #a55eea ;
+    --dark-purple--: #8854d0;
+
+    --ocean--: #1d1d31;
+    --dark-ocean--: #11101d;
+
+    --night--: #353b48;
+    --dark-night--: #2f3640;
+
+    --grey--: #7f8fa6;
+    --dark-grey--: #718093;
+
+    --light--: #f5f6fa;
+    --dark-light--: #dcdde1;
+}
+
+
+
+
+/* Sign in section */
+
+.sign_in_container .left{
+    /* background: url('../images/color-image.png'); */
+    background: var(--dark-night--);
+}
+
+
+.sign_in_container .left .copy {
+    color: white;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.right form {
+    width: 328px;
+}
+
+
+
+
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+    .home_content .right img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+
+    
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+   
+}
+
+
+@media screen and (min-width: 992px) {
+   
+}

@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+   
+</head>
+<body>
+    <div class="top_navigator d-none">
+        <div class="logo_content">
+            <div class="logo">
+                 <i class='bx bxl-c-plus-plus'></i>
+                <div class="logo_name">CodifyLab</div>
+            </div>
+            <i class='bx bx-menu' id="btn2"></i>
+        </div>
+    </div>
+   <div class="sidebar">
+       <div class="logo_content">
+           <div class="logo">
+                <i class='bx bxl-c-plus-plus'></i>
+               <div class="logo_name">CodifyLab</div>
+           </div>
+           <i class='bx bx-menu' id="btn"></i>
+       </div>
+       <ul class="nav_list">
+            <li>
+                <form action="">
+                    <button><i class='bx bx-search'></i></button>
+                    <input placeholder="Search..." type="text">
+                    <span class="tooltip">Search</span>
+                </form>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-user' ></i>
+                    <span class="links_name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-chat' ></i>
+                    <span class="links_name">Chat</span>
+                </a>
+                <span class="tooltip">Chat</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <span class="links_name">Analytics</span>
+                </a>
+                <span class="tooltip">Analytics</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-folder'></i>
+                    <span class="links_name">File Manager</span>
+                </a>
+                <span class="tooltip">Files</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-cart-alt'></i>
+                    <span class="links_name">Order</span>
+                </a>
+                <span class="tooltip">Order</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-heart' ></i>
+                    <span class="links_name">Saved</span>
+                </a>
+                <span class="tooltip">Saved</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-cog' ></i>
+                    <span class="links_name">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+            
+       </ul>
+       <div class="profile-content">
+            <div class="profile">
+                {% if request.user.is_authenticated %}
+                    <div class="profile_details">
+                        <img src="{% static 'me.JPG' %}" alt="">
+                        <div class="name_job">
+                            <div class="name">{{request.user.last_name}} {{request.user.first_name}}</div>
+                            <div class="job">Web Developer</div>
+                        </div>
+                    </div>
+                    <a href="{% url 'sign_out' %}">
+                        <i class='bx bx-log-out log' ></i>
+                    </a>
+                {% else %}
+                <a href="{% url 'sign_in' %}">
+                    <i class='bx bx-log-in log'></i>
+                </a>
+                {% endif %}
+            </div>
+          
+       </div>
+   </div>
+   
+   <!-- Main -->
+   <div class="home_content ">
+    {% block content %}
+        
+            
+    {% endblock %}
+    </div>
+
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
