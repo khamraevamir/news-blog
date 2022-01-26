@@ -34,75 +34,157 @@
                 <form action="">
                     <button><i class='bx bx-search'></i></button>
                     <input placeholder="Search..." type="text">
-                    <span class="tooltip">Search</span>
+                    <span class="tooltip">Поиск</span>
                 </form>
             </li>
-            <li>
-                <a href="">
-                    <i class='bx bx-grid-alt'></i>
-                    <span class="links_name">Dashboard</span>
-                </a>
-                <span class="tooltip">Dashboard</span>
-            </li>
-            <li>
-                <a href="">
-                    <i class='bx bx-user' ></i>
-                    <span class="links_name">User</span>
-                </a>
-                <span class="tooltip">User</span>
-            </li>
-            <li>
-                <a href="">
-                    <i class='bx bx-chat' ></i>
-                    <span class="links_name">Chat</span>
-                </a>
-                <span class="tooltip">Chat</span>
-            </li>
-            <li>
-                <a href="">
-                    <i class='bx bx-pie-chart-alt-2'></i>
-                    <span class="links_name">Analytics</span>
-                </a>
-                <span class="tooltip">Analytics</span>
-            </li>
-            <li>
-                <a href="">
-                    <i class='bx bx-folder'></i>
-                    <span class="links_name">File Manager</span>
-                </a>
-                <span class="tooltip">Files</span>
-            </li>
-            <li>
-                <a href="">
-                    <i class='bx bx-cart-alt'></i>
-                    <span class="links_name">Order</span>
-                </a>
-                <span class="tooltip">Order</span>
-            </li>
-            <li>
-                <a href="">
-                    <i class='bx bx-heart' ></i>
-                    <span class="links_name">Saved</span>
-                </a>
-                <span class="tooltip">Saved</span>
-            </li>
-            <li>
-                <a href="">
-                    <i class='bx bx-cog' ></i>
-                    <span class="links_name">Settings</span>
-                </a>
-                <span class="tooltip">Settings</span>
-            </li>
-            
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_staff %}
+                    <li>
+                        <a href="">
+                            <i class='bx bx-user' ></i>
+                            <span class="links_name">Меню</span>
+                        </a>
+                            <span class="tooltip">Меню</span>
+                    </li>
+                {% else %}
+                    <li class="mt-3">
+                        <a href="">
+                            <i class='bx bx-user' ></i>
+                            <span class="links_name">Профиль</span>
+                        </a>
+                            <span class="tooltip">Профиль</span>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bx-world'></i>
+                            <span class="links_name">Мир</span>
+                        </a>
+                        <span class="tooltip">Мир</span>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-car-crash"></i>
+                            <span class="links_name">Проишествия</span>
+                        </a>
+                        <span class="tooltip">Проишествия</span>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bxs-calculator' ></i>
+                            <span class="links_name">Экономика</span>
+                        </a>
+                        <span class="tooltip">Экономика</span>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bx-microphone'></i>
+                            <span class="links_name">Интервью</span>
+                        </a>
+                        <span class="tooltip">Интервью</span>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bx-football'></i>
+                            <span class="links_name">Спорт</span>
+                        </a>
+                        <span class="tooltip">Спорт</span>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-flask"></i>
+                            <span class="links_name">Наука</span>
+                        </a>
+                        <span class="tooltip">Наука</span>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-users"></i>
+                            <span class="links_name">Культура</span>
+                        </a>
+                        <span class="tooltip">Культура</span>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bx-cog' ></i>
+                            <span class="links_name">Настройки</span>
+                        </a>
+                        <span class="tooltip">Настройки</span>
+                    </li>
+                    {% endif %}
+                {% else %}
+                <li>
+                    <a href="">
+                        <i class='bx bx-world'></i>
+                        <span class="links_name">Мир</span>
+                    </a>
+                    <span class="tooltip">Мир</span>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-car-crash"></i>
+                        <span class="links_name">Проишествия</span>
+                    </a>
+                    <span class="tooltip">Проишествия</span>
+                </li>
+                <li>
+                    <a href="">
+                        <i class='bx bxs-calculator' ></i>
+                        <span class="links_name">Экономика</span>
+                    </a>
+                    <span class="tooltip">Экономика</span>
+                </li>
+                <li>
+                    <a href="">
+                        <i class='bx bx-microphone'></i>
+                        <span class="links_name">Интервью</span>
+                    </a>
+                    <span class="tooltip">Интервью</span>
+                </li>
+                <li>
+                    <a href="">
+                        <i class='bx bx-football'></i>
+                        <span class="links_name">Спорт</span>
+                    </a>
+                    <span class="tooltip">Спорт</span>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-flask"></i>
+                        <span class="links_name">Наука</span>
+                    </a>
+                    <span class="tooltip">Наука</span>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-users"></i>
+                        <span class="links_name">Культура</span>
+                    </a>
+                    <span class="tooltip">Культура</span>
+                </li>
+                <li>
+
+
+
+
+
+
+                {% endif %}     
+             
        </ul>
        <div class="profile-content">
             <div class="profile">
                 {% if request.user.is_authenticated %}
                     <div class="profile_details">
+                        <!-- if else -->
                         <img src="{% static 'me.JPG' %}" alt="">
                         <div class="name_job">
-                            <div class="name">{{request.user.last_name}} {{request.user.first_name}}</div>
-                            <div class="job">Web Developer</div>
+                            <div class="name">
+                                {% if request.user.email|length > 9 %}                                     
+                                    {{ request.user.email|slice:':12' }}...
+                                {% else %}
+                                    {{request.user.email}}
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                     <a href="{% url 'sign_out' %}">
@@ -128,5 +210,6 @@
 
     <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <script src="https://kit.fontawesome.com/92d93db707.js" crossorigin="anonymous"></script>
 </body>
 </html>
