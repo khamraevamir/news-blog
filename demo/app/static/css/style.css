@@ -55,7 +55,36 @@
     width: 328px;
 }
 
+.section_top_left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
+
+.section_top_right a:hover{
+    color: var(--dark-blue--);
+}
+
+
+.section_top_right ul li {
+    border-bottom: 1px solid var(--dark-light--);
+}
+
+
+.section_top_right ul li:last-child {
+    border-bottom: none;
+    padding-bottom: 0 !important;
+}
+
+.section_top_left ul li {
+    border-bottom: 1px solid var(--dark-light--);
+}
+
+.section_top_left ul li:last-child {
+    border-bottom: none;
+    padding-bottom: 0 !important;
+}
 
 
 
