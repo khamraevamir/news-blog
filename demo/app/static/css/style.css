@@ -61,6 +61,10 @@
     object-fit: cover;
 }
 
+.image {
+    width: 230px !important;
+    height: 130px !important;
+}
 
 .section_top_right a:hover{
     color: var(--dark-blue--);
