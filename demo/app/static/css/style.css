@@ -117,3 +117,44 @@
 @media screen and (min-width: 992px) {
    
 }
+
+
+.btnOfNavbar{
+    background: none;
+    border: none;
+ }
+ 
+ .time{
+     opacity: 0.6;
+ }
+ 
+ .about{
+     opacity: 0.6;
+ }
+ 
+ 
+ .inputsearch {
+     
+     border-top-left-radius: 6px;
+     border-bottom-left-radius: 6px;
+     color: #363636;
+     box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
+     border: 1px solid #dbdbdb;
+     border-right: none;
+     width: 100%;
+     font-size: 16px;
+     line-height: 1.5;
+     padding: 7px 11px;
+     outline: none;
+     height: 40px;
+ }
+ 
+ .btnsearch{
+     font-size: 16px;
+     line-height: 1.5;
+     padding: 7px 11px;
+     border-left: none;
+     border-top-right-radius: 6px;
+     border-bottom-right-radius: 6px;
+     box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
+ }
