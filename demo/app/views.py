@@ -5,6 +5,8 @@ from django.http import HttpResponse
 from django.core.exceptions import ValidationError
 from users.forms import CustomUserCreationForm
 
+
+
 def index(request):
     return render(request, 'pages/index.html')
 
